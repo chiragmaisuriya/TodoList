@@ -1,0 +1,17 @@
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\bin\Debug\netcoreapp2.0\DataAccess.deps.json
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\bin\Debug\netcoreapp2.0\DataAccess.dll
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\bin\Debug\netcoreapp2.0\DataAccess.pdb
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.AssemblyInfo.cs
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.dll
+C:\Users\chiragkm\Documents\TodoList-AspNetCore-master\TodoList-AspNetCore-master\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.pdb
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\bin\Debug\netcoreapp2.0\DataAccess.deps.json
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\bin\Debug\netcoreapp2.0\DataAccess.dll
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\bin\Debug\netcoreapp2.0\DataAccess.pdb
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.csprojAssemblyReference.cache
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.AssemblyInfo.cs
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.dll
+C:\Users\chiragkm\Documents\TodoListProject\DataAccess\obj\Debug\netcoreapp2.0\DataAccess.pdb

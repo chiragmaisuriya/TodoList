@@ -1,0 +1,98 @@
+﻿<style>
+    .sortorder:after {
+        content: '\25b2';
+    }
+
+    .sortorder.reverse:after {
+        content: '\25bc';
+    }
+</style>
+<div class="text-left">
+    <h1>My To-Do List</h1>
+    <div *ngIf="errMsg" class="alert alert-danger" role="alert">
+        {{errMsg}}
+    </div>
+    <form #form="ngForm" (submit)="add(form)" class="form-horizontal" novalidate>
+        <div *ngIf="description.invalid && description.touched" class="text-danger">
+            Your task is empty.
+        </div>
+        <div class="form-group">
+            <input #description="ngModel" placeholder="Your Task e.g.Go to Super Market @ 9 AM." type="text" class="form-control" name="description" [(ngModel)]="model.description" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" [disabled]="model.description == '' " class="btn btn-primary">Add</button>
+        </div>
+    </form>
+    <hr />
+
+    <div *ngIf="todos.length > 0">
+        <table class="table table-striped table-condensed table-hover">
+            <thead>
+                <tr>
+
+                    <th>
+                        <a class="nav-link" (click)="sortTodos('isDone')">
+                            Status
+                        </a>
+                        <span *ngIf="orderProp == 'isDone';" class="sortorder" [ngClass]="{reverse: reverse}"></span>
+                    </th>
+                    <th>Description</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let todo of todos; let i = index">
+                    <td>
+                        <div class="form-group">
+                            <div class="checkbox checkbox-inline">
+                                <input type="checkbox" name="isDone_{{ i }}" (change)="update(todo)" [(ngModel)]="todo.isDone" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" name="todoId" [(ngModel)]="todo.todoId">
+                        </div>
+
+                    </td>
+                    <td>
+                        <div *ngIf="description.invalid && description.touched" class="text-danger">
+                            This field is required.
+                        </div>
+                        <div class="form-group">
+                            <input #description="ngModel" type="text" [readonly]="todo.isDone" class="form-control" name="description" [(ngModel)]="todo.description" required>
+                        </div>
+                    </td>
+                    <td>
+
+
+                        <div class="form-group">
+                            <button type="button" (click)="update(todo)" [disabled]="todo.isDone && todo.description != '' " class="btn btn-success" title="Save"><span [class]="todo.isDone && todo.description != '' ? 'glyphicon glyphicon-saved' : 'glyphicon glyphicon-save'"></span></button>
+                            <button type="button" (click)="delete(todo)" class="btn btn-danger" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ul class="pagination">
+        <li class="page-item" [ngClass]="{'disabled':currentPage == 1 }">
+            <a *ngIf="currentPage > 1" [routerLink]="['/todo', currentPage - 1]" class="page-link">
+                Previous
+            </a>
+            <span *ngIf="currentPage == 1" class="page-link">Previous</span>
+        </li>
+        <li *ngFor="let a of pages; let index = index" [ngClass]="{'active': currentPage == index + 1 }" class="page-item">
+            <a [routerLink]="['/todo', index + 1]" class="page-link">
+                {{ index + 1 }}
+            </a>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled': currentPage == totalPages }">
+            <a *ngIf="currentPage < totalPages" [routerLink]="['/todo', currentPage + 1]" class="page-link">
+                Next
+            </a>
+            <span *ngIf="currentPage == totalPages" class="page-link">Next</span>
+        </li>
+    </ul>
+</div>
